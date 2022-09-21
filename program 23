@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    char ch;
+    
+    // file pointer
+    FILE *fp;
+    
+    // open and creates file in write mode if it does not exist.
+    fp = fopen("char", "w");
+    if (fp != NULL) 
+    {
+        printf("File created successfully!\n");
+    }
+    else 
+    {
+        printf("Failed to create the file.\n");
+        return 0;
+    }
+    fclose(fp);
+    return 0;
+}
